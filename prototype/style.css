@@ -3,18 +3,33 @@ body {
   font-family: 'Raleway', 'Helvetica',sans-serif;
   line-height: 2;
   color:#61574B;
-  padding-left: 2em;
-  padding-right: 2em;
 
+
+}
+@media screen and (max-width: 400px) {
+  body{
+  font-size: .8em;
+}
+.rooms p{
+  font-size: .8em;
+  line-height: 1.8;
+}
+.rooms h2{
+  font-size: .9em;
+}
 }
 
 
 
 .hero-image{
   overflow:hidden;
+  background-position: center center;
 
 }
-
+.owners{
+  display: block;
+    margin: 0 auto;
+  }
 h1 {
   font-family: 'Bitter', serif;
   font-size: 3em;
@@ -43,9 +58,7 @@ h3 {
   font-family: 'Bitter', serif;
   color:#cc5500;
 }
-.room{
-  display:flex;
-}
+
 
 
 
@@ -53,6 +66,8 @@ p {
   max-width:800px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
 
 }
 
@@ -117,14 +132,13 @@ max-width: 350px;
 padding: 1em;
 padding-top: 3em;
 }
+
+ul{
+  padding-left: 0;
+}
 /*MENU BAR*/
 
 
-*{
-  margin:0;
-  padding:0;
-
-}
 
 .mobile-menu {
   display:block;
@@ -225,9 +239,7 @@ transition: all 0.4s ease 0s;
   text-transform: uppercase;
 }
 
-.mobile-menu .show-menu span{
-   padding-left: 35px;
-}
+
 
 /*Hide checkbox*/
 .mobile-menu input[type=checkbox]{
@@ -247,10 +259,10 @@ transition: all 0.4s ease 0s;
     border-top: 5px solid #f8f8f8;
     content:"";
     height: 5px;
-    width:20px;
-    padding-right:15px;
-  float: right;
+    width:35px;
+  margin: 0 auto;
 }
+
 	/*Make dropdown links appear inline*/
 	.mobile-menu ul {
 		position: static;
@@ -344,11 +356,6 @@ main img {
   color:white;
 }
 
-.button{
-  text-align: center;
-  text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.5);
-}
 
 p{
   margin-bottom: 2em;
@@ -360,11 +367,16 @@ figure.snip0016 {
   position: relative;
   overflow: hidden;
   min-width: 220px;
-  max-width: 450px;
-  max-height: 450px;
+  max-width: 425px;
+  max-height: 425px;
   width: 100%;
   background: #000000;
-  text-align: left;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 1em;
+
+
+
 
 }
 figure.snip0016 * {
@@ -414,6 +426,7 @@ figure.snip0016 h2 {
   transform: translate3d(30%, 0%, 0);
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
+
 }
 figure.snip0016 h2 span {
   font-weight: 800;
@@ -424,6 +437,7 @@ figure.snip0016 p {
   transform: translate3d(0%, 30%, 0);
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
+  text-align: left;
 }
 figure.snip0016 a {
   left: 0;
@@ -456,6 +470,7 @@ figure.snip0016:hover figcaption::before {
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
+
 
 /*Rooms*/
 
@@ -628,6 +643,7 @@ footer ul{
 .contact {
   list-style-type: none;
   padding-bottom:1em;
+  padding-left: 0;
 }
 
 @media screen and (min-width: 800px){
@@ -639,5 +655,11 @@ footer ul{
     display: flex;
     justify-content:space-around;
   }
-}
+  .rooms {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
 /*FOOTER*/
